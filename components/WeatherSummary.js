@@ -1,6 +1,7 @@
 import { StyleSheet, View, Text, Image } from 'react-native'
 import React from 'react';
 import heroImage from '../assets/moon-cloud-sm.jpg';
+import { FontConstants, ColorConstants, SizeConstants } from '../globalStyles';
 
 export default function WeatherSummary() {
   return (
@@ -18,7 +19,7 @@ export default function WeatherSummary() {
 const styles = StyleSheet.create({
     text: {
         width: '90%',
-        color: '#fff',
+        color: ColorConstants.normal,
         fontSize: 24,
         fontWeight: '600',
         marginTop: 28,

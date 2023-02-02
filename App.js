@@ -22,8 +22,10 @@ export default function App() {
     <ScrollView style={styles.container}>
       <WeatherSummary />
 
-      <Icon name="wi-alien" style={styles.icon} />
-
+      <View>
+        <Icon name="wi-alien" style={styles.icon} />
+      </View>
+  
       <WeatherDetail />
 
       <WeatherHourly />
