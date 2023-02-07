@@ -1,6 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, ScrollView } from 'react-native';
 import { useFonts } from 'expo-font';
+import data from './data';
 
 import Icon from './weatherIcon';
 
@@ -18,8 +19,11 @@ export default function App() {
     return null;
   }
 
+  console.log(data);
+
   return (
     <ScrollView style={styles.container}>
+        <Text style={styles.text}>{data.current.temp}</Text>
       <WeatherSummary />
 
       <View>
@@ -43,7 +47,8 @@ const styles = StyleSheet.create({
 //    justifyContent: 'center',
   },
   text: {
-    color: '#fff'
+    color: '#fff',
+    fontSize: 48
   },
   icon: {
     color: '#fff',
