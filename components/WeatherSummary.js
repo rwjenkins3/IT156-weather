@@ -10,7 +10,7 @@ export default function WeatherSummary() {
       <Image source={heroImage} style={styles.hero} />
       <View style={styles.tempContainer}>
         <Text style={styles.highTemp}>46{'\u00b0'}F</Text>
-        <Text style={styles.lowTemp}>/33{'\u00b0'}</Text>
+        <Text style={styles.lowTemp}>{'\u2215'}33{'\u00b0'}</Text>
       </View>
     </View>
   )
@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
     },
 
     lowTemp: {
-      fontSize: 26,
+      fontSize: 36,
       color: 'lightblue',
       fontWeight: '100'
     },

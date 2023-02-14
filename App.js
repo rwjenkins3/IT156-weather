@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, ScrollView } from 'react-native';
+import { StyleSheet, Text, View, ScrollView, FlatList } from 'react-native';
 import { useFonts } from 'expo-font';
 import data from './data';
 
@@ -8,6 +8,7 @@ import Icon from './weatherIcon';
 import WeatherDetail from './components/WeatherDetail';
 import WeatherHourly from './components/WeatherHourly';
 import WeatherSummary from './components/WeatherSummary';
+import { Hour } from './components/Hour';
 
 export default function App() {
 
@@ -21,6 +22,8 @@ export default function App() {
 
   console.log(data);
 
+  
+
   return (
     <ScrollView style={styles.container}>
         <Text style={styles.text}>{data.current.temp}</Text>
@@ -31,6 +34,17 @@ export default function App() {
       </View>
   
       <WeatherDetail />
+      <FlatList
+        horizontal
+        data={data.hourly}
+        renderItem={({item}) => <Hour hour={item}/> }
+        keyExtractor={(item, index) => index}
+      />
+      { /*
+        data.hourly.map((hour) => {
+          return <Hour pop={hour.pop} />;
+        }) */
+      }
 
       <WeatherHourly />
 
