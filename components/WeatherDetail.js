@@ -10,11 +10,11 @@ export default function WeatherDetail() {
       <Text style={styles.text}>Detail</Text>
       <View style={styles.detailContainer}>
         <DetailTile iconName="wi-thermometer" title="Feels Like" data={data.current.feels_like} />
-        <DetailTile />
-        <DetailTile />
-        <DetailTile />
-        <DetailTile />
-        <DetailTile />
+        <DetailTile iconName="wi-thermometer" title="Feels Like" data={data.current.feels_like}  />
+        <DetailTile iconName="wi-thermometer" title="Feels Like" data={data.current.feels_like}  />
+        <DetailTile iconName="wi-thermometer" title="Feels Like" data={data.current.feels_like}  />
+        <DetailTile iconName="wi-thermometer" title="Feels Like" data={data.current.feels_like}  />
+        <DetailTile iconName="wi-thermometer" title="Feels Like" data={data.current.feels_like}  />
 
       </View>
     </View>
@@ -27,8 +27,9 @@ const styles = StyleSheet.create({
     },
     detailContainer: {
       flexDirection: 'row',
-      justifyContent: '',
-      alignItems: ''
+      justifyContent: 'space-around',
+      alignItems: 'flex-start',
+      flexWrap: 'wrap'
     }
 
 })
