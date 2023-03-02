@@ -26,20 +26,12 @@ export default function App() {
 
   return (
     <ScrollView style={styles.container}>
-        <Text style={styles.text}>{data.current.temp}</Text>
+        
       <WeatherSummary />
 
-      <View>
-        <Icon name="wi-alien" style={styles.icon} />
-      </View>
   
       <WeatherDetail />
-      <FlatList
-        horizontal
-        data={data.hourly}
-        renderItem={({item}) => <Hour hour={item}/> }
-        keyExtractor={(item, index) => index}
-      />
+      
       { /*
         data.hourly.map((hour) => {
           return <Hour pop={hour.pop} />;
